@@ -25,6 +25,7 @@ RUN apt-get install --no-install-recommends -y \
     liblapack-dev \
     libffi-dev \
     python3-pip \
+    libsystemd-dev \
     && rm -rf /var/lib/apt/lists/*
 
 ENV VIRTUAL_ENV=/opt/venv
