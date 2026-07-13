@@ -1,0 +1,14 @@
+services:
+  craftbeerpi:
+    image: sondreslathia/craftbeerpi:latest
+    privileged: true
+    restart: always
+    volumes:
+      - "/opt/craftbeerpi:/cbpi/config"
+    ports:
+      - 9000:8000
+    # When using RaspberryPi GPIO
+    environment:
+      RPI_LGPIO_CHIP: "0"
+    group_add:
+      - "986"
