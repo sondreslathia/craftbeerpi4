@@ -55,6 +55,7 @@ RUN pip3 install --no-cache-dir -r /cbpi-src/requirements.txt
 # /dev/gpiomem device.
 # removed due to rbpi.GPIO not being compatible with raspberry pi 5
 # RUN pip3 install --no-cache-dir RPi.GPIO==0.7.1
+RUN pip3 install --no-cache-dir rpi-lgpio
 
 FROM base as deploy
 # Install craftbeerpi from source
